@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>2×2 Grid Project Cards</title>
+  <style>
+    /* 화면 전체 중앙 정렬 */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    /* 전체 컨테이너: 가운데 정렬용 wrapper */
+    .container {
+      width: 1000px; /* 2컬럼이 들어갈 수 있는 적당한 폭으로 지정 */
+    }
+
+    /* 2×2 그리드 레이아웃 */
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 1.5rem; /* 카드 간격 */
+      justify-items: center; /* 각 카드의 수평 정렬 */
+      align-items: start;    /* 각 카드의 수직 정렬 (컨텐츠 높이만큼 카드가 늘어남) */
+      margin: 0 auto;
+    }
+
+    /* 카드 스타일 */
+    .card {
+      width: 360px;           /* 카드 너비 고정 */
+      /* 높이는 자동으로 늘어나도록 지정 (height: auto) */
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      cursor: pointer; /* 마우스 오버 시 클릭 가능 표시 */
+      color: #333;
+      display: flex;
+      flex-direction: column; /* 이미지를 위, 텍스트를 아래로 배치 */
+      text-decoration: none;  /* a 태그로 쓸 경우 밑줄 제거 */
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    /* 카드 호버 효과(옵션) */
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transform: translateY(-2px);
+    }
+
+    /* 카드 내 이미지 (높이를 적당히 고정) */
+    .card img {
+      width: 100%;
+      height: 180px;     /* 이미지 높이 고정 */
+      object-fit: cover; /* 이미지 비율 유지하며 중앙을 기준으로 잘라서 표시 */
+      display: block;
+    }
+
+    /* 카드 하단 텍스트 영역 */
+    .card-content {
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+    .card-title {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .card-subtitle {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 0.75rem;
+    }
+    .card-description {
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="project-list">
+
+      <!-- 카드 1 -->
+      <div class="card" onclick="location.href='card1.html'">
+        <!-- 실제 프로젝트 이미지를 쓰면 됩니다 -->
+        <img src="https://via.placeholder.com/350x200/87CEEB/000?text=Card+1" alt="Card Image 1">
+        <div class="card-content">
+          <div class="card-title">프로젝트 1</div>
+          <div class="card-subtitle">ACM THE WEB CONFERENCE 2023</div>
+          <div class="card-description">
+            스팟 인스턴스 가격 변동을 분석하여  
+            효율적인 인스턴스 선택 전략을 제안하는 프로젝트.
+            <br><br>
+            추가 설명이 길어져도 카드 높이가 자동으로 늘어나므로  
+            내용이 잘리지 않습니다.
+          </div>
+        </div>
+      </div>
+
+      <!-- 카드 2 -->
+      <div class="card" onclick="location.href='card2.html'">
+        <img src="https://via.placeholder.com/350x200/F08080/000?text=Card+2" alt="Card Image 2">
+        <div class="card-content">
+          <div class="card-title">프로젝트 2</div>
+          <div class="card-subtitle">2023 한국소프트웨어종합학술대회</div>
+          <div class="card-description">
+            다양한 클라우드 인스턴스의 성능 벤치마크와  
+            비용 효율성 연구를 통해 최적 조합을 제안합니다.
+          </div>
+        </div>
+      </div>
+
+      <!-- 카드 3 -->
+      <div class="card" onclick="location.href='card3.html'">
+        <img src="https://via.placeholder.com/350x200/5F9EA0/FFF?text=Card+3" alt="Card Image 3">
+        <div class="card-content">
+          <div class="card-title">프로젝트 3</div>
+          <div class="card-subtitle">ACM THE WEB CONFERENCE 2024</div>
+          <div class="card-description">
+            멀티 클라우드 환경에서 스팟 인스턴스 가용성  
+            향상을 위한 머신러닝 기반 분석 프로젝트.
+          </div>
+        </div>
+      </div>
+
+      <!-- 카드 4 -->
+      <div class="card" onclick="location.href='card4.html'">
+        <img src="https://via.placeholder.com/350x200/FFD700/000?text=Card+4" alt="Card Image 4">
+        <div class="card-content">
+          <div class="card-title">프로젝트 4 (석사학위논문)</div>
+          <div class="card-subtitle">석사학위논문</div>
+          <div class="card-description">
+            안정성과 비용 효율성을 함께 고려한  
+            다중 스팟 인스턴스 추천 시스템 'Sandevistan' 개발.
+          </div>
+        </div>
+      </div>
+
+    </div><!-- .project-list 끝 -->
+  </div><!-- .container 끝 -->
+
+</body>
+</html>
