@@ -1,0 +1,5 @@
+﻿Name,논문 링크,발표 학회,사용된 기술 스택,소요시간,팀원 수
+SpotLake: 다양한 클라우드 업체의 스팟 데이터 수집 시스템 개발 및 분석,https://dl.acm.org/doi/10.1145/3543873.3587314,ACM THE WEB CONFERENCE 2023,"Python, Data-Analysis, boto3, ec2, matplotlib, pandas, seaborn",6개월,6
+하드웨어 성능 및 비용을 고려한 최적의 클라우드 인스턴스 선택 방안 제시,https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11705426,2023 한국소프트웨어종합학술대회,"CPU Benchmark, Data Visualization, Data-Analysis, Python",1개월,3
+다양한 클라우드 제공업체의 스팟 데이터 분석과 스팟 인스턴스 가용성 개선,https://dl.acm.org/doi/10.1145/3589334.3645548,ACM THE WEB CONFERENCE 2024,"Data Visualization, Data-Analysis, Python, sklearn",6개월,2
+Sandevistan: 스팟 데이터를 활용한 스팟 인스턴스 추천 시스템 개발,심사 중,석사 학위 논문,"API Gateway, AWS, Athena, Data-Analysis, Lambda, Python, S3, SQL",2개월,6명
